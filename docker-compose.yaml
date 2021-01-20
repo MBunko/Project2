@@ -2,13 +2,17 @@ version: '3.7'
 services:
   service1:
     container_name: "service1"
+    image: mbunko/service1
     build: ./service1
     ports:
     - target: 5000
-      published: 5000
+      published: 80
       protocol: tcp
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
   service2:
     container_name: "service2"
+    image: mbunko/service2
     build: ./service2
     ports:
     - target: 5000
@@ -16,6 +20,7 @@ services:
       protocol: tcp
   service3:
     container_name: "service3"
+    image: mbunko/service3
     build: ./service3
     ports:
     - target: 5000
@@ -23,6 +28,7 @@ services:
       protocol: tcp
   service4:
     container_name: "service4"
+    image: mbunko/service4
     build: ./service4
     ports:
     - target: 5000
