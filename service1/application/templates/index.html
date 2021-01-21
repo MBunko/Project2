@@ -1,0 +1,13 @@
+<h2>Your D&D character is: </h2>
+
+
+<h1>A {{ adj }} {{ race }} {{ class0 }} </h1> 
+<br>
+
+<h2>Likely dead Characters</h2>
+
+{% for character in char %}
+Someone got a {{ character.Character_description }} {{ character.Character_race}} {{ character.Character_class }} at {{ character.Date}}
+<br>______________________________________________________<br><br>
+{% endfor %}
+
