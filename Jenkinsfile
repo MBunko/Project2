@@ -5,16 +5,28 @@ pipeline{
         DATABASE_URI2= credentials("DATABASE_URI2")
     }
     stages{
-        stage("Configure Swarm"){
+        stage("Tests"){
             steps{
-                sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
+                sh "bash jenkinsbash/test.sh"
             }
-        }
-        stage("Deploy application"){
-            steps{
+        }         
+        //
+       // stage("Configure Swarm"){
+       //     steps{
+         //       sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
+        //    }
+      //  }
+        //stage("Deploy application"){
+          //  steps{
                 //Still need to build deploy.sh
-                sh "bash jenkins/deploy.sh"
-            }
+         //       sh "bash jenkins/deploy.sh"
+ //           }
+//        }
+    }    
+    post{
+        always{
+            junit "**/junit.xml"
+            cobertura coberturaReportFile: '**/coverage.xml', failNoReports: false, failUnstable: false, onlyStable: false
         }
     }
 }
