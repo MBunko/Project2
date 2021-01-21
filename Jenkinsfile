@@ -13,7 +13,7 @@ pipeline{
         stage("Build and push images"){
             steps{
                 sh "docker rmi -f \$(docker images -qa) || true"
-                sh "docker-compose build && docker-compose push"
+                sh "docker-compose build --parallel && docker-compose push"
             }
         }
         
