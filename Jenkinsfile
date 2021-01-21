@@ -7,12 +7,7 @@ pipeline{
     stages{
         stage("Tests"){
             steps{
-                python3 -m venv venv
-                pip3 install -r requirements.txt
-                pip3 install pytest pytest-cov flask_testing requests_mock
-                python3 -m pytest --cov=application --cov-report xml --cov-report term-missing --junitxml junit.xml
-                deactivate 
-                cd..
+                sh "bash jenkinsbash/test.sh"
             }
         }         
         //
