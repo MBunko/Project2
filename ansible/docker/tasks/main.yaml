@@ -1,0 +1,27 @@
+  - name: "update apt get"
+    apt: update_cache=yes force_apt_get=yes
+  - name: "repo set up"
+    apt:
+      pkg:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common 
+      - python3-pip
+      state: latest
+  - name: "docker key"
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+
+  - name: "add repo"
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu bionic stable
+
+  - name: "update again and install engine"
+    apt: update_cache=yes name=docker-ce state=latest
+
+  - name: "python"
+    pip:
+      name: docker
