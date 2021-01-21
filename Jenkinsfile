@@ -9,7 +9,12 @@ pipeline{
             steps{
                 sh "bash jenkinsbash/test.sh"
             }
-        }         
+        }
+        stage("Build and push images"){
+            steps{
+                sh "docker-compose build && docker-compose push"
+            }
+        }
         //
        // stage("Configure Swarm"){
        //     steps{
