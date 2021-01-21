@@ -15,12 +15,12 @@ pipeline{
                 sh "docker-compose build && docker-compose push"
             }
         }
-        //
-       // stage("Configure Swarm"){
-       //     steps{
-         //       sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
-        //    }
-      //  }
+        
+        stage("Configure Swarm"){
+            steps{
+                sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
+            }
+        }
         //stage("Deploy application"){
           //  steps{
                 //Still need to build deploy.sh
