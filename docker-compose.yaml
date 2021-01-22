@@ -2,7 +2,7 @@ version: '3.7'
 services:
   service1:
     container_name: "roller_service1"
-    image: mbunko/service1
+    image: mbunko/service1:${app_version}
     build: ./service1
     ports:
     - target: 5000
@@ -14,19 +14,19 @@ services:
       replicas: 3
   service2:
     container_name: "roller_service2"
-    image: mbunko/service2
+    image: mbunko/service2:${app_version}
     build: ./service2
     deploy:
       replicas: 3
   service3:
     container_name: "roller_service3"
-    image: mbunko/service3
+    image: mbunko/service3:${app_version}
     build: ./service3
     deploy:
       replicas: 3
   service4:
     container_name: "roller_service4"
-    image: mbunko/service4
+    image: mbunko/service4:${app_version}
     build: ./service4
     deploy:
       replicas: 3
