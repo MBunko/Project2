@@ -16,7 +16,7 @@ class Testbase(TestCase):
 
     def setUp(self):
         db.create_all()
-        test_character=Character(Character_class="Paladin", Character_race="Gnome", Character_description="Super evil")
+        test_character=Character(Character_class="Paladin", Character_race="Gnomish", Character_description="Super evil")
         db.session.add(test_character)
         db.session.commit()
         
@@ -34,3 +34,4 @@ class TestCreate(Testbase):
             response=self.client.get(url_for("index"))
             self.assertEqual(response.status_code,200)
             self.assertIn(b'A Meaty Human Barbarian', response.data)
+            self.assertIn(b'Someone got a Super evil Gnomish Paladin', response.data)
