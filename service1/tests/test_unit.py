@@ -28,9 +28,9 @@ class Testbase(TestCase):
 class TestCreate(Testbase):
     def test_char(self):
         with requests_mock.mock() as r:
-            r.get("http://service2:5000/class0", text="Barbarian")
-            r.get("http://service3:5000/race", text="Human")
-            r.get("http://service4:5000/adjective", text="Meaty")
+            r.get("http://roller_service2:5000/class0", text="Barbarian")
+            r.get("http://roller_service3:5000/race", text="Human")
+            r.get("http://roller_service4:5000/adjective", text="Meaty")
             response=self.client.get(url_for("index"))
             self.assertEqual(response.status_code,200)
             self.assertIn(b'A Meaty Human Barbarian', response.data)
