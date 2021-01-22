@@ -14,7 +14,7 @@ pipeline{
         stage("Build and push images"){
             steps{
                 sh "docker rmi -f \$(docker images -qa) || true"
-                sh "docker-compose build --parallel --build-arg APP_VERSION=${app_version} && docker-compose push"
+                sh "docker-compose build --parallel --build-arg APP_VERSION=1 && docker-compose push"
             }
         }
         
