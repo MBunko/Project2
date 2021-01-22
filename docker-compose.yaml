@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   service1:
-    container_name: "service1"
+    container_name: "roller_service1"
     image: mbunko/service1
     build: ./service1
     ports:
@@ -10,27 +10,23 @@ services:
       protocol: tcp
     environment:
       DATABASE_URI: ${DATABASE_URI}
+    deploy:
+      replicas: 3
   service2:
-    container_name: "service2"
+    container_name: "roller_service2"
     image: mbunko/service2
     build: ./service2
-    ports:
-    - target: 5000
-      published: 5001
-      protocol: tcp
+    deploy:
+      replicas: 3
   service3:
-    container_name: "service3"
+    container_name: "roller_service3"
     image: mbunko/service3
     build: ./service3
-    ports:
-    - target: 5000
-      published: 5002
-      protocol: tcp
+    deploy:
+      replicas: 3
   service4:
-    container_name: "service4"
+    container_name: "roller_service4"
     image: mbunko/service4
     build: ./service4
-    ports:
-    - target: 5000
-      published: 5003
-      protocol: tcp
+    deploy:
+      replicas: 3
