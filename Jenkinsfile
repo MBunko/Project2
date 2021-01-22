@@ -3,7 +3,8 @@ pipeline{
     environment{
         DATABASE_URI = credentials("DATABASE_URI")
         DATABASE_URI2= credentials("DATABASE_URI2")
-        app_version=2
+        app_version=1
+        rollback='true'
     }
     stages{
         stage("Tests"){
@@ -14,7 +15,7 @@ pipeline{
         stage("Build and push images"){
             steps{
                 sh "docker rmi -f \$(docker images -qa) || true"
-                sh "docker-compose build --parallel --build-arg APP_VERSION=1 && docker-compose push"
+                sh "docker-compose build --parallel --build-arg APP_VERSION=${app_version} && docker-compose push"
             }
         }
         
