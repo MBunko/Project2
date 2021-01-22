@@ -12,5 +12,9 @@
     vars:
       manager: projectm
 
-
+- hosts: nginx
+  become: true
+  roles:
+  - docker
+  - nginx
  
