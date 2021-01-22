@@ -34,4 +34,4 @@ class TestCreate(Testbase):
             response=self.client.get(url_for("index"))
             self.assertEqual(response.status_code,200)
             self.assertIn(b'A Meaty Human Barbarian', response.data)
-            self.assertIn(b'A Super evil Gnomish Paladin', response.data)
+            self.assertIn(b'Someone got a Super evil Gnomish Paladin', response.data)
