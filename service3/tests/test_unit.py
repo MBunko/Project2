@@ -17,3 +17,4 @@ class TestCreate(Testbase):
             self.assertEqual(response.status_code,200)
             self.assertIn(response.data, [b"Dwarven", b"Elven", b"Gnomish", b"Halfling", b"Half-Elven", b"Half-Orcish", b"Human"])
 
+
