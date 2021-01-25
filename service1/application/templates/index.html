@@ -1,3 +1,7 @@
+    <head>
+        <title> Crazy Character Roller </title>
+    </head>
+
 <h2>Your D&D character is: </h2>
 
 
@@ -15,3 +19,8 @@ Someone got a {{ character.Character_description }} {{ character.Character_race}
 <br>_______________________________________________________________________________________<br><br>
 {% endfor %}
 
+
+<h2> Random character from the past</h2>
+{% for character in randchar %}
+Someone got a {{ character.Character_description }} {{ character.Character_race}} {{ character.Character_class }} at {{ character.Date}}
+{% endfor %}
