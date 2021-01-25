@@ -56,7 +56,7 @@ An ED is an entity diagram and shows the table used for this project. The table 
   
 ![ERD][Initial ERD]  
  
-The Id is the primary key as shown and the date is green because it was added later in production and was not part of the initial design but i thought it would be interesting for users to see how long ago the last rolls were. You will see how this information is displayed in the front end section.
+The Id is the primary key as shown and the date is green because it was added later in production and was not part of the initial design but I thought it would be interesting for users to see how long ago the last rolls were. You will see how this information is displayed in the front end section.
 
 ### Services
 
@@ -113,7 +113,7 @@ Here is a table of the user stories above. The user stories are the users wants 
 |Host|Have tests run automatically|See results immediately upon commits|Must
 |Host|Make sure users only have access to front end |Prevent unauthorized access to my code, database etc.|Must
 |Host|Have an uncluttered back end|Run it cheaply and debug issues more easily|Should
-|Host|Have passwords and secrets completely unaccessible|be certain that sensitive data is secured|Must
+|Host|Have passwords and secrets completely inaccessible|be certain that sensitive data is secured|Must
 
 
 
@@ -226,7 +226,7 @@ App version: 3
 
 Version 1 code is avaiable to view in the branch feature-v1, version 2 is in the feature-v2 branch and if you wish to deploy this application remember it will deploy whichever version is selected in the Jenkinsfile.
 
-There are currently no other working versions beyond these 2#3 and their differences are highlighted in the front end section above.
+There are currently no other working versions beyond these 3 and their differences are highlighted in the front end section above.
 
 [Initial ERD]: https://i.imgur.com/59nalIJ.png
 [TB1]: https://i.imgur.com/nI9mu4Z.png
