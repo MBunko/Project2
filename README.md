@@ -7,7 +7,7 @@
  2.1. [ED](#ED)
  2.2. [Services](#Services)
  2.3. [CI pipeline](#CI-pipeline)
- 2.4. [Swarm][#Swarm]
+ 2.4. [Swarm](#Swarm)
 3. [Project planning](#Project-planning)
  3.1. [Asana board](#Asana-board)
  3.2. [Expanded user stories](#Expanded-user-stories)
