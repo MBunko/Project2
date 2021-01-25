@@ -84,7 +84,7 @@ Below you can see a diagram of my docker swarm that is set up by the pipeline.
 
 ![Sw][Sw]
 
-The swarm manager, both workers and the nginx balancer are all run on separate virtual machines on google cloud (this is also true for the Jenkins server). The manager pulls down the services and runs copies of them across the swarm workers and itself. For my project I have 2 workers and 3 replicas of each service. The tasks in the workers are individual copies of the containers for a service. This exists so that the individual containers aren't overloaded by heavy traffic and so that if either server or any container stops working the app will continue to run. Nginx then acts as a reverse proxy so it's IP is where users will actually visit the web app keeping them from directly accessing the back end. It also directs which tasks will be used for each user balancing the load and making sure the containers are distributed appropriately.
+The swarm manager, both workers and the nginx balancer are all run on separate virtual machines on google cloud (this is also true for the Jenkins server). The manager pulls down the services and runs copies of them across the swarm workers and itself. For my project I have 2 workers and 3 replicas of each service. The tasks in the workers are individual copies of the containers for a service. This exists so that the individual containers aren't overloaded by heavy traffic and so that if either server or any container stops working the app will continue to run. Nginx then acts as a reverse proxy so it's IP is where users will actually visit the web app keeping them from directly accessing the servers running app or the back end. It also directs which tasks will be used for each user balancing the load and making sure the containers are distributed appropriately.
 
 ## Project planning
 
@@ -96,12 +96,12 @@ Below is the Asana board for the project:
   
 ![TB1][TB1]  
 
-The sections above are fairly self explanatory. The only thing in the not done section was using nexus as a repository for my docker images and docker hub was used instead for its ease of use. While nexus is more secure than docker hub this project is open source so people are free to downlaod my images and docker hub does still protect from people pushing their own changes up without my login information.  
+The sections above are fairly self explanatory with requirements being the MVP for the project. The only thing in the not done section was using nexus as a repository for my docker images and docker hub was used instead for its ease of use. While nexus is more secure than docker hub this project is open source so people are free to downlaod my images and docker hub does still protect from people pushing their own changes up without my login information.  
 
 
 ### Expanded user stories  
   
-Here is a table of the user stories above. The user stories exist so that I don't lose focus of why tasks on the board need to be done so that if there are any issues I can use the user stories for my work around:
+Here is a table of the user stories above. The user stories are the users wants for the application and they exist so that I don't lose focus of why tasks on the board need to be done so that if there are any issues I can use the user stories for my work around:
 
 |As a…|I want to…|	So that I can…|Priority|
 |---|---|---|---|
@@ -185,7 +185,7 @@ The main issue is that docker hub is used to store the images as mentioned above
 
 ### Possible improvements
 
-In future versions more descriptions can always be added for variety. To really push variance a second descriptor dictionary with more depth to the descriptions could be added to service 4 that follows on at the end on the homepage. Also customisability could be added letting users select whether they want the class and race to fit with one another making service 2 and 3 potentially dependent on one another.
+In future versions more descriptions can always be added for variety. To really push variance a second descriptor dictionary with more depth to the descriptions could be added to service 4 that follows on at the end on the homepage. Also customisability could be added letting users select whether they want the class and race to fit with one another making service 2 and 3 potentially dependent on one another. Finally, I could add a random roll from the past to maybe show the occasional result from past versions.
 
 ## Appendix
 
