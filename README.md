@@ -175,7 +175,11 @@ The next picture shows version two. It has a button to roll a new character so t
 
 The important thing here is that the Jenkinfile is set up so that by entering a 1 or a 2 for the version in environments the pipeline will activate and deploy the chosen version allowing for easy, quick and convenient switching between versions and this can also be applied to future updates.
 
+![F3][F3]
 
+Finally above is version 3. The only large change here are the inclusion of a random roll from the past making the date-time inclusion more impactful since it could be from months ago as well as perhaps showing people results from older versions that may no longer be possible for added variety. The other change is the inclusion of the title at the top where the tab bar is. 
+
+The important thing here is that the Jenkinfile is set up so that by entering a 1, 2, or 3 for the version in environments the pipeline will activate and deploy the chosen version allowing for easy, quick and convenient switching between versions and this can also be applied to future updates.
 
 ## Evaluation
 
@@ -185,7 +189,7 @@ The main issue is that docker hub is used to store the images as mentioned above
 
 ### Possible improvements
 
-In future versions more descriptions can always be added for variety. To really push variance a second descriptor dictionary with more depth to the descriptions could be added to service 4 that follows on at the end on the homepage. Also customisability could be added letting users select whether they want the class and race to fit with one another making service 2 and 3 potentially dependent on one another. Finally, I could add a random roll from the past to maybe show the occasional result from past versions.
+In future versions more descriptions can always be added for variety. To really push variance a second descriptor dictionary with more depth to the descriptions could be added to service 4 that follows on at the end on the homepage. Also customisability could be added letting users select whether they want the class and race to fit with one another making service 2 and 3 potentially dependent on one another.
 
 ## Appendix
 
@@ -218,11 +222,11 @@ I would also like to thank the members of my teams during training for their hel
 
 ### Versioning
 
-App version: 2
+App version: 3
 
-Version 1 code is avaiable to view in the branch feature-v1 and if you wish to deploy this application remember it will deploy whichever version is selected in the Jenkinsfile.
+Version 1 code is avaiable to view in the branch feature-v1, version 2 is in the feature-v2 branch and if you wish to deploy this application remember it will deploy whichever version is selected in the Jenkinsfile.
 
-There are currently no other working versions beyond these 2 and their differences are highlighted in the front end section above.
+There are currently no other working versions beyond these 2#3 and their differences are highlighted in the front end section above.
 
 [Initial ERD]: https://i.imgur.com/59nalIJ.png
 [TB1]: https://i.imgur.com/nI9mu4Z.png
@@ -236,5 +240,6 @@ There are currently no other working versions beyond these 2 and their differenc
 [Cov1]: https://i.imgur.com/zX4AjEg.png
 [F1]: https://i.imgur.com/k4eWWGb.png
 [F2]: https://i.imgur.com/jPSWqO3.png
+[F3]: https://i.imgur.com/eySAIIG.png
 [CI1]: https://i.imgur.com/ZcU1I6I.png
 
