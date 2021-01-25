@@ -173,7 +173,6 @@ Above is the home page for version one, it is the only page users can navigate t
 
 The next picture shows version two. It has a button to roll a new character so the user doesn't have to reload the page to get a new character. It also has 2 new classes including the above Blood-hunter and the Artificer. The descriptors from service 4 have been updated to account for these and has 4 new descriptors, 2 specific to each new class. Finally the races have been reformatted to flow better as you can see the difference between Gnome being rolled in version one and Gnomish in version two. 
 
-The important thing here is that the Jenkinfile is set up so that by entering a 1 or a 2 for the version in environments the pipeline will activate and deploy the chosen version allowing for easy, quick and convenient switching between versions and this can also be applied to future updates.
 
 ![F3][F3]
 
